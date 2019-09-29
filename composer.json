@@ -1,0 +1,24 @@
+{
+	"name": "engailtonoliveira/feedback",
+	"type": "project",
+	"description": "php plugin responsible for receiving feedback on anything",
+    "keywords": [
+        "feedback",
+        "feedback php",
+        "pluguin feedback",
+        "pluguin feedback php"
+    ],
+	"license": "MIT",
+  	"authors": [
+    	{
+      	"email": "engailtonoliveira@gmail.com",
+      	"name": "Ailton Oliveira"
+    	}
+  	],
+	"autoload": {
+		"psr-4": {
+			"DB\\": "database/",
+			"Classes\\":"src/classes/"
+		}
+	}
+}
