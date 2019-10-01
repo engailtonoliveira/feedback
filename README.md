@@ -7,6 +7,8 @@ You can add this plugin to your php project and manage feedback from your end cu
 
 ![alt text](https://repository-images.githubusercontent.com/211730414/55ef2f80-e486-11e9-8286-92b645fde3ce)
 
+![feedback](https://raw.githubusercontent.com/engailtonoliveira/feedback/branch/public/img/Template_Feedback1.png
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
