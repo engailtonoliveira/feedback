@@ -5,9 +5,8 @@
 This is a php feedback plugin.
 You can add this plugin to your php project and manage feedback from your end customers.
 
-![alt text](https://repository-images.githubusercontent.com/211730414/55ef2f80-e486-11e9-8286-92b645fde3ce)
+![feedback](https://repository-images.githubusercontent.com/211730414/55ef2f80-e486-11e9-8286-92b645fde3ce)
 
-![feedback](relative/public/img/Template_Feedback1.png?raw=true "Title")
 
 ## Getting Started
 
