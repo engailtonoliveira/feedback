@@ -1,5 +1,5 @@
 <?php
-  require_once __DIR__ . '/vendor/autoload.php';
+  require_once '../vendor/autoload.php';
 
   use Classes\QueryFeedback;
 
@@ -14,10 +14,10 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/mdb.min.css" rel="stylesheet">
-  <title>Dout | Feedback</title>
+	<link rel="stylesheet" href="../public/css/font-awesome.min.css">
+	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../public/css/mdb.min.css" rel="stylesheet">
+  <title>Feedback | Statistic</title>
 
   <style>
     :root {
@@ -136,10 +136,10 @@
       </section>
       <!-- Section: Contact v.3 -->
   	</div>
-  	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  	<script type="text/javascript" src="js/popper.min.js"></script>
-  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="js/mdb.min.js"></script>
+  	<script type="text/javascript" src="../public/js/jquery-3.2.1.min.js"></script>
+  	<script type="text/javascript" src="../public/js/popper.min.js"></script>
+  	<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="../public/js/mdb.min.js"></script>
     <script>
       var bar = <?= json_encode($barFeedback);?>;
 
@@ -156,7 +156,6 @@
             data: {
                 labels: objBar['labels'],
                 datasets: [{
-                    /*label: '# of Votes',*/
                     data: objBar['data'],
                     backgroundColor: objBar['backgroundColor'],
                     borderColor: objBar['borderColor'],

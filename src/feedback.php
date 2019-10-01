@@ -1,9 +1,9 @@
 <?php
-  require_once __DIR__ . '/vendor/autoload.php';
+  require_once '../vendor/autoload.php';
 
   use Classes\Feedback;
-  $token_app = "bvnçoaonba10922ry23tyir2jhsbvadkjvb";
-  $token_user = "fvnçoaonba10922ry23tyir2jhsbvadkjvb";
+  $token_app = "bvnçoaonbailtonry23tyir2jhsbvadkjva";
+  $token_user = "fabriciaa10922ry23tyir1jhsbvadkjvb";
   $feedback = new Feedback();
   $feedback->setTokenApp($token_app);
   $feedback->setTokenUser($token_user);
@@ -16,10 +16,10 @@
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/mdb.min.css" rel="stylesheet">
-  <title>Dout | Feedback</title>
+	<link rel="stylesheet" href="../public/css/font-awesome.min.css">
+	<link href="../public/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../public/css/mdb.min.css" rel="stylesheet">
+  <title>Feedback</title>
 
   <style>
     :root {
@@ -64,9 +64,9 @@
       overflow-x: hidden;
     }
 
-      .rest-background-color {
-        background-color : var(--dout-primary);
-      }
+    .rest-background-color {
+      background-color : var(--dout-primary);
+    }
   </style>
 </head>
 <body>
@@ -76,11 +76,11 @@
         </div>
       </section>
   	</div>
-  	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  	<script type="text/javascript" src="js/popper.min.js"></script>
-  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-  	<script type="text/javascript" src="js/mdb.min.js"></script>
-    <script type="text/javascript" src="js/moment.min.js"></script>
+  	<script type="text/javascript" src="../public/js/jquery-3.2.1.min.js"></script>
+  	<script type="text/javascript" src="../public/js/popper.min.js"></script>
+  	<script type="text/javascript" src="../public/js/bootstrap.min.js"></script>
+  	<script type="text/javascript" src="../public/js/mdb.min.js"></script>
+    <script type="text/javascript" src="../public/js/moment.min.js"></script>
 
     <script>
       var w = window.innerWidth;
@@ -235,7 +235,7 @@
         $.ajax({
           type: 'POST',
           data: {"operation":1,"feedback":dataFeedback},
-          url: 'pages/crudRestaurantModeleFeedback.php',
+          url: 'pages/crudFeedback.php',
           dataType: 'json',
           cache: false
         }).done(function(data,status){

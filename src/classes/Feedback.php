@@ -11,7 +11,7 @@
 		private $token_app;
 		private $token_user;
 		private $sql;
-		private static $db = 'dout_feedback';
+		private static $db = 'feedback';
 
 		function __construct()
 		{
@@ -158,15 +158,28 @@
 	    }
 
 	    public function setClassByPrimayKey(){
-	    	$result = $this->execQuerySelect("SELECT `id`, `date_time` AS dateTime, `emotion`, `comments`, `user_type` AS userType, `token_app` AS tokenApp, `token_user` AS tokenUser FROM `feedback` WHERE id = ".$this->getId()." LIMIT 1");
-	    	$this->setArraySerialize($result[0]);
-	    	return $this;
+	    	
+	    	$query = "SELECT `id`, `date_time` AS dateTime, `emotion`, `comments`, `user_type` AS userType, `token_app` AS tokenApp, `token_user` AS tokenUser FROM `feedback` WHERE id = ".$this->getId()." LIMIT 1";
+
+	    	$response = $this->execQuerySelect($query);
+
+	    	if ( $response ) {
+				$this->setArraySerialize($response[0]);
+				return 1;
+			}else
+				return 0;
 	    }
 
 	    public function setClassBySecundaryKey(){
-	    	$result = $this->execQuerySelect("SELECT `id`, `date_time` AS dateTime, `emotion`, `comments`, `user_type` AS userType, `token_app` AS tokenApp, `token_user` AS tokenUser FROM `feedback` WHERE token_app = '".$this->getTokenApp()."' AND token_user = '".$this->getTokenUser()."' ORDER BY date_time desc  LIMIT 1");
-	    	$this->setArraySerialize($result[0]);
-	    	return $this;
+	    	$query = "SELECT `id`, `date_time` AS dateTime, `emotion`, `comments`, `user_type` AS userType, `token_app` AS tokenApp, `token_user` AS tokenUser FROM `feedback` WHERE token_app = '".$this->getTokenApp()."' AND token_user = '".$this->getTokenUser()."' ORDER BY date_time desc  LIMIT 1";
+
+	    	$response = $this->execQuerySelect($query);
+
+	    	if ( $response ) {
+				$this->setArraySerialize($response[0]);
+				return 1;
+			}else
+				return 0;
 	    }
 
 	    public function insertIntoTable($sql = null){

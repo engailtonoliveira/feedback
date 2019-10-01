@@ -9,7 +9,7 @@
 		private $feedbackNormal;
 		private $feedbackHappy;
 		private $sql;
-		private static $db = 'dout_feedback';
+		private static $db = 'feedback';
 
 
 		function __construct()
@@ -88,16 +88,7 @@
 	    	);
 	    }
 
-	    public function setClass(){
-	    	/*$this->setAllFeedback($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) ORDER BY date_time desc;"));
-
-	    	$this->setFeedbackSad($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '1' ORDER BY date_time desc;"));
-
-	    	$this->setFeedbackSurprised($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '2' ORDER BY date_time desc;"));
-
-	    	$this->setFeedbackNormal($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '3' ORDER BY date_time desc;"));
-
-	    	$this->setFeedbackHappy($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '4' ORDER BY date_time desc;"));*/
+	    public function setClass() {
 
 	    	for ($i = 0; $i < 5; $i++)
 	    		$this->setClassAttr($i);
@@ -112,16 +103,16 @@
 	    			$this->setAllFeedback($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) ORDER BY date_time desc;"));
 	    			break;
 	    		case '1':
-	    			$this->setFeedbackSad($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '1' ORDER BY date_time desc;"));
+	    			$this->setFeedbackSad($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like 'sad' ORDER BY date_time desc;"));
 	    			break;
 	    		case '2':
-	    			$this->setFeedbackSurprised($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '2' ORDER BY date_time desc;"));
+	    			$this->setFeedbackSurprised($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like 'normal' ORDER BY date_time desc;"));
 	    			break;
 	    		case '3':
-	    			$this->setFeedbackNormal($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '3' ORDER BY date_time desc;"));
+	    			$this->setFeedbackNormal($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like 'surprise' ORDER BY date_time desc;"));
 	    			break;
 	    		case '4':
-	    			$this->setFeedbackHappy($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like '4' ORDER BY date_time desc;"));
+	    			$this->setFeedbackHappy($this->execQuerySelect("SELECT * FROM feedback WHERE YEAR(date_time) = YEAR(CURRENT_DATE()) AND MONTH(date_time) = MONTH(CURRENT_DATE()) AND emotion like 'happy' ORDER BY date_time desc;"));
 	    			break;
 	    		default:
 	    			# code...

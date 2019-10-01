@@ -6,7 +6,7 @@
 		private static $host = 'localhost';
 		private static $charset = 'utf8';
 		private static $user = 'root';
-		private static $pass = 'root';
+		private static $pass = 'Hakaselabs001@#';
 		private static $bd;
 		public $banco;
 		private $pdo_dns;
