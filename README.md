@@ -2,7 +2,8 @@
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://doge.mit-license.org)
 
-php plugin responsible for receiving feedback on anything
+This is a php feedback plugin.
+You can add this plugin to your php project and manage feedback from your end customers.
 
 ## Getting Started
 
