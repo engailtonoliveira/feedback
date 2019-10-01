@@ -5,6 +5,8 @@
 This is a php feedback plugin.
 You can add this plugin to your php project and manage feedback from your end customers.
 
+![alt text](https://raw.githubusercontent.com/engailtonoliveira/feedback/branch/path/to/img.png)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
